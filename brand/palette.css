@@ -1,0 +1,7 @@
+/* Exact locked Efrotz palette; supporting implementation file. */
+:root {
+  --efrotz-charcoal: #1F1F24;
+  --efrotz-crimson: #D7263D;
+  --efrotz-gold: #D4AF37;
+  --efrotz-ivory: #F7F4E8;
+}
