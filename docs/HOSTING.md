@@ -10,13 +10,15 @@ GitHub reference: https://docs.github.com/en/pages/getting-started-with-github-p
 
 - Avatar: `https://efrotz.github.io/efrotz-brand-assets/approved/avatars/efrotz-avatar-400.png`
 - Community/welcome banner: `https://efrotz.github.io/efrotz-brand-assets/approved/banners/efrotz-community-banner.png`
+- Discord mascot thumbnail (exact 512px source): `https://efrotz.github.io/efrotz-brand-assets/approved/discord/efrotz-welcome-mascot-512.png`
+- Discord custom "Welcome to Efrotz HQ" banner (1280px hosted copy): `https://efrotz.github.io/efrotz-brand-assets/approved/discord/efrotz-welcome-banner-1280.png`
 - Index: `https://efrotz.github.io/efrotz-brand-assets/`
 
-These paths returned HTTP 200 after successful deployment on 2026-10-12. The PNGs were served as `image/png` and matched the approved source checksums. See `VERIFICATION.md` for results. Desktop Discord embed behavior has not yet been tested.
+The avatar and community banner were checked live on 2026-10-12. The two Discord-specific PNGs were committed later and still need the newest Pages deployment/live checks before their URLs can be considered verified. The PNGs were served as `image/png` and matched the approved source checksums. See `VERIFICATION.md` for results. Desktop Discord embed behavior has not yet been tested.
 
 ## Carl-bot check after hosting is live
 
-Use the direct `.png` banner URL in the embed's image field and the avatar URL in the thumbnail field. Do not use a GitHub `blob` page, the asset index, or an image-hosting landing page as an image URL.
+For the approved custom welcome greeting, use the `approved/discord/efrotz-welcome-banner-1280.png` direct PNG in the large Image URL field and `approved/discord/efrotz-welcome-mascot-512.png` in the Thumbnail URL field. The original generic community banner is not a substitute for the custom "Welcome to Efrotz HQ" design. Do not use a GitHub `blob` page, the asset index, or an image-hosting landing page as an image URL.
 
 1. Confirm anonymous GET returns HTTP 200 with `Content-Type: image/png`, a decodable PNG, and the expected checksum.
 2. Open the direct URLs in a browser and confirm the images render.
