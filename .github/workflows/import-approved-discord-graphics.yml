@@ -21,34 +21,32 @@ jobs:
           mkdir -p approved/discord
           curl --fail --location --silent --show-error --retry 3 --connect-timeout 20 --max-time 120 \
             'https://i.postimg.cc/G9n4srkb/welcome-to-efrotz-hq.png' \
-            --output approved/discord/efrotz-welcome-banner.png
+            --output approved/discord/efrotz-welcome-banner-1280.png
           curl --fail --location --silent --show-error --retry 3 --connect-timeout 20 --max-time 120 \
             'https://i.postimg.cc/m2nZPTyH/Efrotz-Welcome-Embed-Mascot-512.png' \
             --output approved/discord/efrotz-welcome-mascot-512.png
-          python3 -m pip install --quiet Pillow==11.3.0
+          printf '%s\n' \
+            '10cdb9600f577d4541557fc8bfef27ed5fa38d92e14ccb9b6e40df76eff3ff57  approved/discord/efrotz-welcome-banner-1280.png' \
+            'd130e7bd82806b84c68fdcf7ab6f06180dc0aac52839420b45b24838fae052c8  approved/discord/efrotz-welcome-mascot-512.png' \
+            | sha256sum --check --strict
           python3 - <<'PY'
           from pathlib import Path
-          from PIL import Image
-          from hashlib import sha256
+          import struct
           expected = {
-              'approved/discord/efrotz-welcome-banner.png': ((2172, 724), '7f75f63535efd95be7e49a0e7f539c60a218962d01e248e17d9cbcd765431b9d'),
-              'approved/discord/efrotz-welcome-mascot-512.png': ((512, 512), '01e17b47a66cf52edaf465353a472fcaae5f2ec5514113b8feaec981ef9ad12e'),
+              'approved/discord/efrotz-welcome-banner-1280.png': (1280, 427),
+              'approved/discord/efrotz-welcome-mascot-512.png': (512, 512),
           }
-          for name, (dims, pixels_sha) in expected.items():
+          for name, dims in expected.items():
               raw = Path(name).read_bytes()
-              image = Image.open(name)
-              image.load()
-              actual_sha = sha256(image.convert('RGBA').tobytes()).hexdigest()
-              print(name, image.size, len(raw), 'bytes; file SHA256', sha256(raw).hexdigest(), 'pixel SHA256', actual_sha)
-              assert image.format == 'PNG', f'Not a PNG: {name}'
-              assert image.size == dims, f'Unexpected dimensions: {name}'
-              assert actual_sha == pixels_sha, f'Content differs from approved image: {name}'
+              assert raw[:8] == b'\x89PNG\r\n\x1a\n', f'Not a PNG: {name}'
+              assert struct.unpack('>II', raw[16:24]) == dims, f'Wrong dimensions: {name}'
+              print(name, dims, len(raw), 'bytes verified')
           PY
       - name: Commit approved graphics
         shell: bash
         run: |
           set -euo pipefail
-          git add approved/discord/efrotz-welcome-banner.png approved/discord/efrotz-welcome-mascot-512.png
+          git add approved/discord/efrotz-welcome-banner-1280.png approved/discord/efrotz-welcome-mascot-512.png
           if git diff --staged --quiet; then
             echo 'Assets already committed'
             exit 0
