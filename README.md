@@ -43,6 +43,15 @@ Transparent PNGs retain their original bytes and alpha channels. Banner filename
 
 The [asset library](https://efrotz.github.io/efrotz-brand-assets/) is live on GitHub Pages from `main` / root with HTTPS. All 13 inventory entries returned HTTP 200 and matched their SHA-256 checksums on 2026-10-12. All ten approved PNGs rendered in the live browser index. See [hosting and Carl-bot test instructions](docs/HOSTING.md) and [verification results](docs/VERIFICATION.md). Desktop Discord embed testing remains pending.
 
+## Approved Discord welcome graphics
+
+The two welcome graphics created and approved during the Efrotz Discord configuration are now available in [approved/discord/](approved/discord/):
+
+- [Efrotz welcome banner — 1280×427 hosted export](approved/discord/efrotz-welcome-banner-1280.png) — the same approved "Welcome to Efrotz HQ" artwork that appears in Carl-bot; Postimages reduced the published copy from the 2172×724 master. This is a **Discord-sized export**, not the full-resolution master.
+- [Efrotz welcome mascot — 512×512](approved/discord/efrotz-welcome-mascot-512.png) — the exact approved thumbnail, unchanged.
+
+Direct URLs are documented in [docs/HOSTING.md](docs/HOSTING.md). Both images were downloaded from the URLs supplied during the Discord setup and checksum-verified before commit. The full-resolution 2172×724 banner master is retained in the ChatGPT conversation but has **not** been uploaded into this repository; do not mislabel the smaller export as that master.
+
 ## No license granted
 
 No open-source, Creative Commons, or other reuse license is granted by this repository. Public availability is for asset delivery and does not grant permission to reuse Efrotz branding, mascot, or wordmark. Contact the owner for permission. No claim of exclusive copyright or trademark clearance is made; applicable rights remain with their respective holders. No third-party license has been added.
