@@ -135,6 +135,27 @@
       "bytes": 1216381,
       "width": 1536,
       "height": 1024
+    },
+    {
+      "path": "approved/discord/efrotz-welcome-banner-1280.png",
+      "original_filename": "welcome_to_efrotz_hq.png (Postimages-hosted 1280px export)",
+      "status": "approved-discord-export",
+      "purpose": "Approved wide custom Welcome to Efrotz HQ Carl-bot graphic; Postimages resized source from 2172x724, original master remains only in ChatGPT conversation",
+      "sha256": "10cdb9600f577d4541557fc8bfef27ed5fa38d92e14ccb9b6e40df76eff3ff57",
+      "bytes": 1016106,
+      "width": 1280,
+      "height": 427
+    },
+    {
+      "path": "approved/discord/efrotz-welcome-mascot-512.png",
+      "original_filename": "Efrotz_Welcome_Embed_Mascot_512.png",
+      "status": "approved-discord-original",
+      "purpose": "Exact optimized 512px mascot thumbnail approved for Carl-bot welcome and role panels",
+      "sha256": "d130e7bd82806b84c68fdcf7ab6f06180dc0aac52839420b45b24838fae052c8",
+      "bytes": 329115,
+      "width": 512,
+      "height": 512,
+      "color_type": 6
     }
   ]
 }
