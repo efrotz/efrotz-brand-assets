@@ -1,0 +1,5 @@
+# Preserve original asset and brand-reference bytes across operating systems.
+approved/** -text
+brand/EFROTZ_BRAND_REFERENCE.md -text
+*.png -text
+*.jpg -text

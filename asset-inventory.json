@@ -1,0 +1,140 @@
+{
+  "schema_version": 1,
+  "assets": [
+    {
+      "path": "approved/reference/efrotz-master-brand-board.png",
+      "original_filename": "01_Efrotz_Approved_Master_Brand_Board(2).png",
+      "status": "approved-original",
+      "purpose": "Canonical brand board",
+      "sha256": "56ef5bb15d8dcd0d018fbd635ff33d49fff33ce12a9af25221ea650da5d2ce36",
+      "bytes": 1804264,
+      "width": 1254,
+      "height": 1254,
+      "color_type": 2
+    },
+    {
+      "path": "approved/avatars/efrotz-avatar-master.png",
+      "original_filename": "02_Efrotz_Profile_Avatar_Master(2).png",
+      "status": "approved-original",
+      "purpose": "Primary avatar master",
+      "sha256": "58db9c7ed1f17bab409fbc3aa5e6ce04f90fab942ff71c96e6fc45720bdbc853",
+      "bytes": 1704614,
+      "width": 1254,
+      "height": 1254,
+      "color_type": 2
+    },
+    {
+      "path": "approved/avatars/efrotz-avatar-400.png",
+      "original_filename": "03_Efrotz_Profile_Avatar_400px.png",
+      "status": "approved-original",
+      "purpose": "400px avatar; existing repository file preserved",
+      "sha256": "37b499f273250170d56387023e1a095c42ba6508f914a56f39b76aa96b2064c9",
+      "bytes": 208600,
+      "width": 400,
+      "height": 400,
+      "color_type": 2
+    },
+    {
+      "path": "approved/logos/efrotz-mascot-wordmark-transparent.png",
+      "original_filename": "04_Efrotz_Logo_Mascot_Lockup_Transparent.png",
+      "status": "approved-original",
+      "purpose": "Mascot and original wordmark lockup",
+      "sha256": "c7e1824f2f75f5bfc4c7238eab54f810b4e70948b3c1f9c8bf4710a31ba5bc89",
+      "bytes": 1470885,
+      "width": 1536,
+      "height": 1024,
+      "color_type": 6
+    },
+    {
+      "path": "approved/mascot/efrotz-full-body-transparent.png",
+      "original_filename": "05_Efrotz_Full_Body_Mascot_Transparent(2).png",
+      "status": "approved-original",
+      "purpose": "Full-body mascot",
+      "sha256": "fcb54b861ea7461e84d864f2d3a4d07e833f0d42f1c93572099084d15d6b1eb3",
+      "bytes": 1146600,
+      "width": 1254,
+      "height": 1254,
+      "color_type": 6
+    },
+    {
+      "path": "approved/logos/efrotz-circular-badge-transparent.png",
+      "original_filename": "06_Efrotz_Circular_Badge_Transparent.png",
+      "status": "approved-original",
+      "purpose": "Circular badge",
+      "sha256": "3ae5605a0868270a45b406c48597eabca59f72c25e7556b18f50643d09f6274c",
+      "bytes": 1652909,
+      "width": 1254,
+      "height": 1254,
+      "color_type": 6
+    },
+    {
+      "path": "approved/banners/efrotz-youtube-banner-artwork.png",
+      "original_filename": "07_Efrotz_YouTube_Banner_Artwork.png",
+      "status": "approved-original",
+      "purpose": "YouTube source composition; platform crop not certified",
+      "sha256": "b899bd32410dde55122dabd2531c759b2eecb0a0e91a3f9c8a17946c0be480a0",
+      "bytes": 1744601,
+      "width": 1672,
+      "height": 941,
+      "color_type": 2
+    },
+    {
+      "path": "approved/banners/efrotz-x-header-artwork.png",
+      "original_filename": "08_Efrotz_X_Header_Artwork.png",
+      "status": "approved-original",
+      "purpose": "X header source composition; platform crop not certified",
+      "sha256": "68bab89a14f1739f79b5e85975f084271b775d98e12eac27b545181a6301e06f",
+      "bytes": 1720164,
+      "width": 1672,
+      "height": 941,
+      "color_type": 2
+    },
+    {
+      "path": "approved/banners/efrotz-community-banner.png",
+      "original_filename": "09_Efrotz_Community_Banner_Artwork.png",
+      "status": "approved-original",
+      "purpose": "Community banner matching the successful direct upload in the Discord screenshot",
+      "sha256": "05a37402616822dee6ac47854f9133c1d7f99c7151ab8cdf5dd840b6c5520e68",
+      "bytes": 1615218,
+      "width": 1672,
+      "height": 941,
+      "color_type": 2
+    },
+    {
+      "path": "approved/backgrounds/efrotz-thumbnail-background.png",
+      "original_filename": "10_Efrotz_Thumbnail_Background.png",
+      "status": "approved-original",
+      "purpose": "Reusable background; not a final episode thumbnail",
+      "sha256": "51a04fcf92296a91917f366ba151a6615667450c232929976ddcda97dcf45c63",
+      "bytes": 1696915,
+      "width": 1672,
+      "height": 941,
+      "color_type": 2
+    },
+    {
+      "path": "approved/reference/efrotz-approved-assets-contact-sheet.jpg",
+      "original_filename": "Efrotz_Approved_Assets_Contact_Sheet(2).jpg",
+      "status": "approved-original",
+      "purpose": "Approved pack contact sheet",
+      "sha256": "101e54db2e1f4ea7f78a22c300236f218d3846395e913bbfae9158ff3fe3f0e2",
+      "bytes": 224931
+    },
+    {
+      "path": "brand/EFROTZ_BRAND_REFERENCE.md",
+      "original_filename": "EFROTZ_BRAND_REFERENCE(1).md",
+      "status": "approved-reference",
+      "purpose": "Verbatim supplied brand reference",
+      "sha256": "d462403f7b55fbd6481d4726baa725422166e0f49abed75135977842b6eb28a3",
+      "bytes": 2668
+    },
+    {
+      "path": "proposed/backgrounds/efrotz-announcement-background-v1.png",
+      "status": "proposed-unapproved",
+      "purpose": "Optional blank announcement background; no mascot or wordmark; requires palette and visual review",
+      "sha256": "434367e1224a25b7bf14f54370fe45542322719e71a3507e88399d5492a5fa7c",
+      "bytes": 1216381,
+      "width": 1536,
+      "height": 1024
+    }
+  ]
+}
