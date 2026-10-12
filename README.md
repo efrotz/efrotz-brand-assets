@@ -41,7 +41,7 @@ Transparent PNGs retain their original bytes and alpha channels. Banner filename
 
 ## Image hosting for Discord
 
-See [hosting and Carl-bot test instructions](docs/HOSTING.md). The repository includes a static asset index and `.nojekyll`, ready for GitHub Pages from `main` / root. Preparation does not mean hosting is enabled or that Discord has been tested.
+The [asset library](https://efrotz.github.io/efrotz-brand-assets/) is live on GitHub Pages from `main` / root with HTTPS. All 13 inventory entries returned HTTP 200 and matched their SHA-256 checksums on 2026-10-12. All ten approved PNGs rendered in the live browser index. See [hosting and Carl-bot test instructions](docs/HOSTING.md) and [verification results](docs/VERIFICATION.md). Desktop Discord embed testing remains pending.
 
 ## No license granted
 
