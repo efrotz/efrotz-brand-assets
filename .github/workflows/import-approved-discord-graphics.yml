@@ -1,0 +1,57 @@
+name: Import approved Efrotz Discord graphics
+on:
+  push:
+    paths:
+      - '.github/workflows/import-approved-discord-graphics.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  import-approved-assets:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out asset library
+        uses: actions/checkout@v4
+      - name: Download and verify approved images
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p approved/discord
+          curl --fail --location --silent --show-error --retry 3 --connect-timeout 20 --max-time 120 \
+            'https://i.postimg.cc/G9n4srkb/welcome-to-efrotz-hq.png' \
+            --output approved/discord/efrotz-welcome-banner.png
+          curl --fail --location --silent --show-error --retry 3 --connect-timeout 20 --max-time 120 \
+            'https://i.postimg.cc/m2nZPTyH/Efrotz-Welcome-Embed-Mascot-512.png' \
+            --output approved/discord/efrotz-welcome-mascot-512.png
+          printf '%s\n' \
+            '5cba7ca9a0cfd5f873179f327bc71d64cbd9c35d45f66a29396ac1703e99babd  approved/discord/efrotz-welcome-banner.png' \
+            'd130e7bd82806b84c68fdcf7ab6f06180dc0aac52839420b45b24838fae052c8  approved/discord/efrotz-welcome-mascot-512.png' \
+            | sha256sum --check --strict
+          python3 - <<'PY'
+          from pathlib import Path
+          import struct
+          expected = {
+              'approved/discord/efrotz-welcome-banner.png': (2172, 724),
+              'approved/discord/efrotz-welcome-mascot-512.png': (512, 512),
+          }
+          for name, dims in expected.items():
+              b = Path(name).read_bytes()
+              assert b[:8] == b'\x89PNG\r\n\x1a\n', f'Not a PNG: {name}'
+              assert struct.unpack('>II', b[16:24]) == dims, f'Wrong image size: {name}'
+              print(name, dims, len(b), 'bytes verified')
+          PY
+      - name: Commit approved graphics
+        shell: bash
+        run: |
+          set -euo pipefail
+          git add approved/discord/efrotz-welcome-banner.png approved/discord/efrotz-welcome-mascot-512.png
+          if git diff --staged --quiet; then
+            echo 'Assets already committed'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'Add approved Discord welcome banner and 512px mascot'
+          git push
